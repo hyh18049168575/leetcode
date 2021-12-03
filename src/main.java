@@ -3,7 +3,7 @@ public class main {
         String s = "leetcode";
 
 
-        No830.solution(s);
+        No1446.maxPower(s);
 
     }
 }

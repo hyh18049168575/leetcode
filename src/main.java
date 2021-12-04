@@ -1,9 +1,11 @@
 public class main {
     public static void main(String[] args) {
-        String s = "leetcode";
+        String a = "dasd";
+        String b = "fasdfjasiodfhasdfafdsafvxzvx";
 
 
-        No1446.maxPower(s);
+        No383.canConstruct(a , b);
+        System.out.println(No383.canConstruct(a,b));
 
     }
 }

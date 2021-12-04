@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class No1446 {
     public static int maxPower(String s) {
         int a = 1;
@@ -16,6 +18,7 @@ public class No1446 {
                 a = 1;
             }
         }
+        System.out.println(max);
         return max;
     }
 }

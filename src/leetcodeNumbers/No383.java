@@ -1,3 +1,5 @@
+package leetcodeNumbers;
+
 public class No383 {
     public static boolean canConstruct(String a, String b) {
         int[] c = new int[26];

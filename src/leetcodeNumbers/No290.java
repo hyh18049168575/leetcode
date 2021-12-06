@@ -1,3 +1,5 @@
+package leetcodeNumbers;
+
 import java.util.HashMap;
 
 public class No290 {

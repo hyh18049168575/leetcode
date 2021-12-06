@@ -1,3 +1,5 @@
+package leetcodeNumbers;
+
 import java.util.Arrays;
 
 public class No389 {

@@ -1,11 +1,13 @@
+import leetcodeNumbers.No1446;
+import leetcodeNumbers.No1816;
+
 public class main {
     public static void main(String[] args) {
-        String a = "dasd";
-        String b = "fasdfjasiodfhasdfafdsafvxzvx";
+        String s = "What is the solution to this problem";
+        int k = 5;
 
 
-        No383.canConstruct(a , b);
-        System.out.println(No383.canConstruct(a,b));
+        No1816.truncateSentence(s,k);
 
     }
 }

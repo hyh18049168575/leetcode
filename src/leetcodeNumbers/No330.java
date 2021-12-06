@@ -1,3 +1,5 @@
+package leetcodeNumbers;
+
 public class No330 {
     public static int solution(int[] num, int n) {
         int sum = 0;

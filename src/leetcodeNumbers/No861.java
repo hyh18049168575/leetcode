@@ -1,3 +1,5 @@
+package leetcodeNumbers;
+
 public class No861 {
     public static int matrixScore(int[][] A) {
         int result=0;

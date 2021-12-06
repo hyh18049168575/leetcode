@@ -1,4 +1,4 @@
-import javax.swing.*;
+package leetcodeNumbers;
 
 public class No1446 {
     public static int maxPower(String s) {
@@ -18,7 +18,6 @@ public class No1446 {
                 a = 1;
             }
         }
-        System.out.println(max);
         return max;
     }
 }

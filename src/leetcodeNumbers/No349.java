@@ -5,17 +5,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class No349 {
-    public int[] intersect(int[] nums1, int[] nums2) {
+    public static int[] intersect(int[] nums1, int[] nums2) {
         int a = 0;
         int b = 0;
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         List<Integer> list = new ArrayList<>();
-        while (a<nums1.length&&b<nums2.length){
+        while (a<nums1.length && b<nums2.length){
             if (nums1[a]<nums2[b]){
                 a++;
             }
-            if (nums1[a] == nums2[b]){
+            else if (nums1[a]>nums2[b]){
+                b++;
+            }
+            else if (nums1[a] == nums2[b]){
                 list.add(nums1[a]);
                 a++;b++;
             }

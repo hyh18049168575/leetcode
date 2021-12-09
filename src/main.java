@@ -1,11 +1,9 @@
-import leetcodeNumbers.No121;
+import leetcodeNumbers.No349;
 
 public class main {
     public static void main(String[] args) {
-        int[] s = {7,1,5,3,6,4};
-
-
-        No121.maxProfit(s);
-
+        int[] a = {1,2};
+        int[] b = {1,1};
+        No349.intersect(a,b);
     }
 }

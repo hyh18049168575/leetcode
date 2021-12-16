@@ -1,8 +1,12 @@
 package basicKnowledge;
 
+import com.sun.source.tree.Tree;
+
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 
 public class binaryTree {
@@ -62,6 +66,45 @@ public class binaryTree {
         postOrderTraveral(node.leftChild);
         postOrderTraveral(node.rightChild);
         System.out.println(node.data);
+    }
+
+    /**
+     * 二叉树非递归前序遍历
+     * @param root
+     */
+    public static void preOrderTraveralWithStack(TreeNode root){
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode treeNode = root;
+        while (treeNode != null|| !stack.isEmpty()){
+            while (treeNode!=null){
+                System.out.println(treeNode.data);
+                stack.push(treeNode);
+                treeNode = treeNode.leftChild;
+            }
+            if (!stack.isEmpty()){
+                treeNode = stack.pop();
+                treeNode = treeNode.rightChild;
+            }
+        }
+    }
+
+    /**
+     * 二叉树层序遍历（广度）
+     * @param root
+     */
+    public static void levelOrderTraversal(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            System.out.println(node.data);
+            if (node.leftChild!=null){
+                queue.offer(node.leftChild);
+            }
+            if (node.rightChild!=null){
+                queue.offer(node.rightChild);
+            }
+        }
     }
 
     public static void main(String[] args) {

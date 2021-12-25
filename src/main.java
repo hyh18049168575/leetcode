@@ -1,8 +1,9 @@
-import leetcodeNumbers.No48;
+import leetcodeNumbers.No242;
 
 public class main {
     public static void main(String[] args) {
-        int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
-        No48.rotate(a);
+        String a = "anagrasmssd";
+        String b = "nagaramdfcv";
+        No242.isAnagram(a,b);
     }
 }

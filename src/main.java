@@ -1,9 +1,9 @@
-import leetcodeNumbers.No242;
+import leetcodeNumbers.No28;
 
 public class main {
     public static void main(String[] args) {
-        String a = "anagrasmssd";
-        String b = "nagaramdfcv";
-        No242.isAnagram(a,b);
+        String a = "mississippi";
+        String b = "issip";
+        No28.strStr(a,b);
     }
 }

@@ -1,26 +1,29 @@
 package leetcodeNumbers;
 
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.Arrays;
 
 public class No242 {
-    public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()||s.equals(t)) {
-            return false;
+    public static boolean isAnagram(String s, String t) {
+        boolean a = false;
+        if (s.length() != t.length()){
+            a = false;
         }
-        Map<Character, Integer> table = new HashMap<Character, Integer>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            table.put(ch, table.getOrDefault(ch, 0) + 1);
-        }
-        for (int i = 0; i < t.length(); i++) {
-            char ch = t.charAt(i);
-            table.put(ch, table.getOrDefault(ch, 0) - 1);
-            if (table.get(ch) < 0) {
-                return false;
+        else {
+            char [] b = s.toCharArray();
+            char [] c = t.toCharArray();
+            Arrays.sort(b);
+            Arrays.sort(c);
+            for (int i = 0;i<s.length();i++){
+                if (b[i] != c[i]){
+                    a = false;
+                    break;
+                }
+                else{
+                    a = true;
+                }
             }
         }
-        return true;
-
+        return a;
     }
 }

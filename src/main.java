@@ -1,7 +1,8 @@
-import leetcodeNumbers.No38;
+import Offer2.No19;
 
 public class main {
     public static void main(String[] args) {
-        No38.countAndSay(4);
+        String s2 = "ABC";
+//        No19.validPalindrome(s2);
     }
 }

@@ -1,10 +1,9 @@
 package Offer2;
 
-import java.util.List;
 import java.util.Stack;
 
-class No24and25 {
-    public class ListNode {
+class No24and25and26and27 {
+    public static class ListNode {
      int val;
      ListNode next;
      ListNode() {}
@@ -103,6 +102,78 @@ class No24and25 {
             ans.next = ln;
         }
         return ans.next;
+    }
+
+
+//26
+    public void reorderList(ListNode head) {
+        if (head == null)return;
+        ListNode mid = findMid(head);
+        ListNode l1 = head;
+        ListNode l2 = mid.next;
+        mid.next = null;
+        l2 = reverseList26(l2);
+        mergeList(l1,l2);
 
     }
+    public ListNode findMid(ListNode head){
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next!=null&&fast.next.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+    public ListNode reverseList26(ListNode head){
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null){
+            ListNode tem = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tem;
+        }
+        return pre;
+    }
+    public void mergeList(ListNode l1,ListNode l2){
+            ListNode l1_tmp;
+            ListNode l2_tmp;
+        while (l1 != null&& l2 != null){
+            l1_tmp = l1.next;
+            l2_tmp = l2.next;
+            l1.next = l2;
+            l1 = l1_tmp;
+            l2.next = l1;
+            l2 = l2_tmp;
+        }
+    }
+    //27
+    public static boolean isPalindrome(ListNode head) {
+        if (head == null)return true;
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next!=null&&fast.next.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        slow=slow.next;
+        ListNode rev = slow;
+        ListNode pre = null;
+        while (rev != null){
+            ListNode tem = rev.next;
+            rev.next = pre;
+            pre = rev;
+            rev = tem;
+        }
+        ListNode p1 = head;
+        ListNode p2 = pre;
+        while (p2 != null){
+            if (p1.val!=p2.val)return false;
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return true;
+    }
+
 }

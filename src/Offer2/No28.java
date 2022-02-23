@@ -8,5 +8,6 @@ class Node {
 };
 public class No28 {
     public Node flatten(Node head) {
-
+        return new Node();
+    }
 }

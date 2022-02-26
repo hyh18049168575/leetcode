@@ -10,6 +10,6 @@ public class No2170 {
             if ((i&1)==0)cnt0[nums[i]]++;
             else cnt1[nums[i]]++;
         }
-        return 1;
+
     }
 }

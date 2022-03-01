@@ -1,8 +1,6 @@
 package leetcodeNumbers;
 
-import java.util.Arrays;
-
-public class No2170 {
+public class No2170notyet {
     public int minimumOperations(int[] nums) {
         int n = 100001;
         int[] cnt0 = new int[n], cnt1 = new int[n];
